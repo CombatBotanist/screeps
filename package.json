@@ -1,0 +1,23 @@
+{
+  "name": "screeps",
+  "version": "1.0.0",
+  "description": "Screeps AI",
+  "main": "dist/main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "watch": "tsc -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CombatBotanist/screeps.git"
+  },
+  "author": "John Guy",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/lodash": "^4.17.0",
+    "@types/node": "^20.11.30",
+    "@types/screeps": "^3.3.8",
+    "typescript": "^5.4.2"
+  }
+}
