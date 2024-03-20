@@ -1,6 +1,7 @@
 "use strict";
-var roleHarvester = require("role.harvester");
-var roleUpgrader = require("role.upgrader");
+const interfaces = require("interfaces");
+const roleHarvester = require("role.harvester");
+const roleUpgrader = require("role.upgrader");
 const { spawnCreep } = require("helpers");
 module.exports.loop = function () {
     // Clear memory of dead creeps
@@ -10,6 +11,7 @@ module.exports.loop = function () {
             console.log("Clearing non-existing creep memory:", name);
         }
     }
+    // Spawn creeps if necessary
     let roles = {
         harvester: [],
         upgrader: [],
