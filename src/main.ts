@@ -20,9 +20,7 @@ module.exports.loop = function () {
     upgrader: []
   }
   for (const name in Game.creeps) {
-    console.log(name);
     const creep: Creep = Game.creeps[name];
-    console.log(creep.memory.role);
     roles[(creep.memory as CreepMemory).role].push(creep);
   }
 
@@ -30,8 +28,8 @@ module.exports.loop = function () {
     harvester: 2,
     upgrader: 1
   }
-  if (roles.harvester.length < roleQuotas.harvester && Game.spawns['Spawn1'].spawning === null) {
-    spawnCreep([WORK, CARRY, MOVE], 'harvester');
+  if (roles.harvester.length) {
+    spawnCreep([WORK, CARRY, MOVE], 'harvester', Game.spawns['Spawn1']);
   }
 
   // Visualize spawning creeps
