@@ -25,6 +25,9 @@ module.exports.loop = function () {
     if (roles.harvester.length) {
         spawnCreep([WORK, CARRY, MOVE], 'harvester', Game.spawns['Spawn1']);
     }
+    if (roles.upgrader.length) {
+        spawnCreep([WORK, CARRY, MOVE], 'upgrader', Game.spawns['Spawn1']);
+    }
     // Visualize spawning creeps
     if (Game.spawns['Spawn1'].spawning) {
         var spawningCreep = Game.creeps[Game.spawns['Spawn1'].spawning.name];
