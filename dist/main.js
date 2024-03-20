@@ -22,10 +22,10 @@ module.exports.loop = function () {
         harvester: 2,
         upgrader: 1
     };
-    if (roles.harvester.length) {
+    if (roles.harvester.length < roleQuotas.harvester) {
         spawnCreep([WORK, CARRY, MOVE], 'harvester', Game.spawns['Spawn1']);
     }
-    if (roles.upgrader.length) {
+    if (roles.upgrader.length < roleQuotas.upgrader) {
         spawnCreep([WORK, CARRY, MOVE], 'upgrader', Game.spawns['Spawn1']);
     }
     // Visualize spawning creeps
