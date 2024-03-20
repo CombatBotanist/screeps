@@ -6,7 +6,7 @@ exports.spawnCreep = (body, role, spawner) => {
         return;
     var name = `${role}_${Game.time}`;
     console.log(`Spawning new ${role}: ${name}`);
-    Game.spawns['Spawn1'].spawnCreep(body, name, { memory: { role } });
+    Game.spawns["Spawn1"].spawnCreep(body, name, { memory: { role } });
 };
 exports.bodyCost = (body) => {
     let sum = 0;
