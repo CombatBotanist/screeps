@@ -1,5 +1,4 @@
-var roleHarvester: any = {
-
+module.exports = {
 	run: function (creep: any) {
 		if (creep.store.getFreeCapacity() > 0) {
 			var sources = creep.room.find(FIND_SOURCES);
@@ -22,5 +21,3 @@ var roleHarvester: any = {
 		}
 	}
 };
-
-module.exports = roleHarvester;
