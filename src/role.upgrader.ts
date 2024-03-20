@@ -1,5 +1,4 @@
-var roleUpgrader: any = {
-
+module.exports = {
   run: function (creep: any) {
     if (creep.memory.upgrading && creep.store[RESOURCE_ENERGY] == 0) {
       creep.memory.upgrading = false;
@@ -23,5 +22,3 @@ var roleUpgrader: any = {
     }
   }
 };
-
-module.exports = roleUpgrader;

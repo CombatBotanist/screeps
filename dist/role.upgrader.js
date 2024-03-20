@@ -1,5 +1,5 @@
 "use strict";
-var roleUpgrader = {
+module.exports = {
     run: function (creep) {
         if (creep.memory.upgrading && creep.store[RESOURCE_ENERGY] == 0) {
             creep.memory.upgrading = false;
@@ -22,4 +22,3 @@ var roleUpgrader = {
         }
     }
 };
-module.exports = roleUpgrader;
