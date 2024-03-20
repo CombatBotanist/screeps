@@ -12,7 +12,9 @@ module.exports.loop = function () {
     }
     let roles = {};
     for (const name in Game.creeps) {
+        console.log(name);
         const creep = Game.creeps[name];
+        console.log(creep.memory.role);
         roles[creep.memory.role].push(creep);
     }
     const roleQuotas = {

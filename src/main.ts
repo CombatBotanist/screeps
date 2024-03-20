@@ -17,7 +17,9 @@ module.exports.loop = function () {
   }
   let roles: { [key: string]: Creep[] } = {}
   for (const name in Game.creeps) {
+    console.log(name);
     const creep: Creep = Game.creeps[name];
+    console.log(creep.memory.role);
     roles[(creep.memory as CreepMemory).role].push(creep);
   }
 
