@@ -1,5 +1,6 @@
-var roleHarvester = require("role.harvester");
-var roleUpgrader = require("role.upgrader");
+const interfaces = require("interfaces");
+const roleHarvester = require("role.harvester");
+const roleUpgrader = require("role.upgrader");
 const { spawnCreep } = require("helpers");
 
 module.exports.loop = function () {
@@ -12,16 +13,13 @@ module.exports.loop = function () {
   }
 
   // Spawn creeps if necessary
-  interface CreepMemory {
-    role: string;
-  }
   let roles: { [key: string]: Creep[] } = {
     harvester: [],
     upgrader: [],
   };
   for (const name in Game.creeps) {
     const creep: Creep = Game.creeps[name];
-    roles[(creep.memory as CreepMemory).role].push(creep);
+    roles[creep.memory.role].push(creep);
   }
 
   const roleQuotas: { [key: string]: number } = {
