@@ -10,7 +10,10 @@ module.exports.loop = function () {
             console.log('Clearing non-existing creep memory:', name);
         }
     }
-    let roles = {};
+    let roles = {
+        harvester: [],
+        upgrader: []
+    };
     for (const name in Game.creeps) {
         console.log(name);
         const creep = Game.creeps[name];

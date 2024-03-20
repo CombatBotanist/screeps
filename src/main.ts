@@ -15,7 +15,10 @@ module.exports.loop = function () {
   interface CreepMemory {
     role: string;
   }
-  let roles: { [key: string]: Creep[] } = {}
+  let roles: { [key: string]: Creep[] } = {
+    harvester: [],
+    upgrader: []
+  }
   for (const name in Game.creeps) {
     console.log(name);
     const creep: Creep = Game.creeps[name];
