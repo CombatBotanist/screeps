@@ -24,7 +24,7 @@ module.exports.loop = function () {
 
   const roleQuotas: { [key: string]: number } = {
     harvester: 2,
-    upgrader: 1,
+    upgrader: 2,
   };
   if (roles.harvester.length < roleQuotas.harvester) {
     spawnCreep([WORK, CARRY, MOVE], "harvester", Game.spawns["Spawn1"]);

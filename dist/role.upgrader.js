@@ -19,8 +19,9 @@ module.exports = {
         }
         else {
             var sources = creep.room.find(FIND_SOURCES);
-            if (creep.harvest(sources[0]) == ERR_NOT_IN_RANGE) {
-                creep.moveTo(sources[0], { visualizePathStyle: { stroke: "#ffaa00" } });
+            const closestSource = creep.pos.findClosestByPath(sources);
+            if (closestSource && creep.harvest(closestSource) == ERR_NOT_IN_RANGE) {
+                creep.moveTo(closestSource, { visualizePathStyle: { stroke: "#ffaa00" } });
             }
         }
     },
